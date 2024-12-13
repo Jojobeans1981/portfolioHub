@@ -1,0 +1,35 @@
+body
+    {  
+    display: flex;
+    flex-direction: column;
+    align-contents: center;
+    }
+
+    .myName {
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       font-size: 3em;
+    }
+    p {
+      font-size: 1.5em;
+      display: flex;
+      flex-direction: row;
+      auto;
+    }
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navButton {
+    background-color: #A7C7E7; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20%
+    }
