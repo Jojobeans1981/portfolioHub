@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Github, Linkedin, Code2, ExternalLink, TestTube2, Library, Briefcase, Mail, MapPin, Download, Play } from 'lucide-react';
+import { Github, Linkedin, Code2, ExternalLink, Briefcase, Mail, MapPin, Download, Play } from 'lucide-react';
 
 const Portfolio = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
-  const [playingVideo, setPlayingVideo] = useState(null);
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
   const projects = [
     {
@@ -26,13 +26,14 @@ const Portfolio = () => {
     }
   ];
 
-  const handleVideoClick = (index) => {
-    if (playingVideo === index) {
-      setPlayingVideo(null);
-    } else {
-      setPlayingVideo(index);
-    }
-  };
+  const handleVideoClick = (index: number) => {
+  if (playingVideo === index) {
+    setPlayingVideo(null);
+  } else {
+    setPlayingVideo(index);
+  }
+};
+
 
   const renderVideoPreview = (project, index) => {
     if (playingVideo === index) {
